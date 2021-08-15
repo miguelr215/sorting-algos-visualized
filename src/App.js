@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 
 import TopBar from '../src/components/TopBar/TopBar';
+import MobileNav from './components/MobileNav/MobileNav';
 import AppControls from '../src/components/AppControls/AppControls';
+import SortVisualizer from './components/SortVisualizer/SortVisualizer';
 
-import BubbleSort, { BubbleSortDesc, BubbleSortKey} from './Algorithms/BubbleSort';
+import BubbleSort, { BubbleSortDesc, BubbleSortKey } from './Algorithms/BubbleSort';
 
 
 class App extends Component {
@@ -56,6 +58,14 @@ class App extends Component {
 
   }
 
+  handleAlgorithmChange = (algorithm) => {
+    this.setState({ algorithm }, this.generateRandomArray);
+  }
+
+  handleArraySizeChange = (arraySize) => {
+    this.setState({ arraySize }, this.generateRandomArray);
+  }
+
   createTrace = () => {
     const numbers = [...this.state.array];
     const sort = this.ALGORITHM[this.state.algorithm];
@@ -83,25 +93,37 @@ class App extends Component {
         algorithm={this.state.algorithm}
         onAlgorithmChange={this.handleAlgorithmChange}
         arraySize={this.state.arraySize}
-        onArraySizeChange={this.state.handleArraySizeChange}
+        onArraySizeChange={this.handleArraySizeChange}
         onGenerateRandomArray={this.generateRandomArray}
       />
     );
 
     return (
       <div className="App">
-        <header className="App-header">
 
-          <TopBar
-            mobileNavOpen={this.state.mobileNavOpen}
-            toggleMobileNav={this.toggleMobileNav}
-          >
+        <TopBar
+          mobileNavOpen={this.state.mobileNavOpen}
+          toggleMobileNav={this.toggleMobileNav}
+        >
           {controls} 
-          </TopBar>
+        </TopBar>
 
+        <MobileNav
+          open={this.state.mobileNavOpen}
+          closeMobileNav={this.toggleMobileNav}
+        >
+          {controls}
+        </MobileNav>
 
+        <main className='App__Body'>
+          <SortVisualizer 
+            array={this.state.array}
+            trace={this.state.trace}
+            colorKey={colorKey}
+            desc={desc}
+          />
+        </main>
 
-        </header>
       </div>
     );
   }

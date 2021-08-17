@@ -14,7 +14,9 @@ const getListOfBars = (
 ) => {
     return numbers.map((num, i) => {
         let width = 100 / numbers.length;
+        console.log(`width: ${width}`);
         let height = (num / maxNum) * 100;
+        console.log(`height: ${height}`);
         let stateA = groupA.includes(i);
         let stateB = groupB.includes(i);
         let stateC = groupC.includes(i);

@@ -18,6 +18,39 @@ class SortVisualizer extends Component {
         playbackSpeed: 1
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.array !== this.props.array) {
+            this._reset(this.props.array);
+        };
+        if (prevProps.trace !== this.props.trace) {
+            this.clearTimeouts();
+            this.setState({ trace: this.props.trace });
+        };
+    }
+
+    // Actions
+
+    _reset = (array) => {
+        this.setState({
+            array,
+            trace:[],
+            traceStep: -1,
+            originalArray: [...array],
+            groupA: [],
+            groupB: [],
+            groupC: [],
+            groupD: [],
+            sortedIndices: []
+        });
+    }
+
+    clearTimeouts = () => {
+        this.state.timeoutIds.forEach((timeoutId) => {
+            clearTimeout(timeoutId)
+        });
+        this.setState({ timeoutIds: [] });
+    }
+
     render() {
         return (
             <div className='SortVisualizer'>

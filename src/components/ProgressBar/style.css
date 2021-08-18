@@ -1,0 +1,36 @@
+.ProgressBar {
+    width: 100%;
+    height: 5px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #696969;
+}
+
+.ProgressBar__Active {
+    height: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #800000;
+    animation-name: timing-translate;
+    animation-duration: 500ms;
+}
+
+@keyframes timing-translate {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+        transform: translateX(0);
+    }
+
+    50% {
+        animation-timing-function: cubic-bezier(.3, .38, .55, .96);
+        transform: translateX(75%);
+    }
+
+    100% {
+        transform: translateX(200%);
+    }
+}

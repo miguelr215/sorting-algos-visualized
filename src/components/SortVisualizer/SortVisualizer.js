@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './style.css';
 
 import SortChart from '../SortChart/SortChart';
+import ProgressBar from '../ProgressBar/ProgressBar';
+import ColorKey from '../ColorKey/ColorKey';
 
 class SortVisualizer extends Component {
     state ={
@@ -54,6 +56,7 @@ class SortVisualizer extends Component {
     render() {
         return (
             <div className='SortVisualizer'>
+
                 <SortChart 
                     numbers={this.state.array}
                     maxNum={Math.max(...this.state.array)}
@@ -63,6 +66,18 @@ class SortVisualizer extends Component {
                     groupD={this.state.groupD}
                     sortedIndices={this.state.sortedIndices}
                 />
+
+                <div className='SortVisualizer__ProgressBar'>
+                    <ProgressBar 
+                        width={
+                            this.state.trace.length > 0
+                                ? (this.state.traceStep / (this.state.trace.length - 1)) * 100
+                                : 0
+                        }
+                    />
+                </div>
+
+                <ColorKey {...this.props.colorKey} />
             </div>
         );
     };

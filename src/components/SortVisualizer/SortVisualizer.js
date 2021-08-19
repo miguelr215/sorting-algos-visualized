@@ -4,9 +4,10 @@ import './style.css';
 import SortChart from '../SortChart/SortChart';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import ColorKey from '../ColorKey/ColorKey';
+import SortInfo from '../SortInfo/SortInfo';
 
 class SortVisualizer extends Component {
-    state ={
+    state = {
         trace:[],
         traceStep: -1,
         originalArray: [],
@@ -78,6 +79,8 @@ class SortVisualizer extends Component {
                 </div>
 
                 <ColorKey {...this.props.colorKey} />
+
+                <SortInfo {...this.props.desc} />
             </div>
         );
     };

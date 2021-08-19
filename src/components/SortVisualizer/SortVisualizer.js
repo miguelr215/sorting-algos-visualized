@@ -3,6 +3,7 @@ import './style.css';
 
 import SortChart from '../SortChart/SortChart';
 import ProgressBar from '../ProgressBar/ProgressBar';
+import VisualizerControls from '../VisualizerControls/VisualizerControls';
 import ColorKey from '../ColorKey/ColorKey';
 import SortInfo from '../SortInfo/SortInfo';
 
@@ -77,6 +78,10 @@ class SortVisualizer extends Component {
                         }
                     />
                 </div>
+
+                <VisualizerControls 
+                    
+                />
 
                 <ColorKey {...this.props.colorKey} />
 

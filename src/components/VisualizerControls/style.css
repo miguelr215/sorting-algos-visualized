@@ -1,0 +1,35 @@
+.VisualizerControls {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.VisualizerControls__CenterButton {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #5eb5f0;
+}
+
+.VisualizerControls__CenterButton:hover {
+    cursor: pointer;
+}
+
+.VisualizerControls__CenterButton:hover,
+.VisualizerControls__CenterButton:focus {
+    background-color: #1e84c9;
+}
+
+.VisualizerControls__CenterButton:disabled {
+    background-color: #cacaca;
+}
+
+.VisualizerControls__Button,
+.VisualizerControls__SpeedButton {
+    padding: 0 10px;
+}
+
+.VisualizerControls__Icon {
+    height: 20px;
+    width: 20px;
+}

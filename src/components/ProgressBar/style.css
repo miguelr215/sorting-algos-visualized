@@ -3,14 +3,14 @@
     height: 5px;
     border-radius: 4px;
     overflow: hidden;
-    background-color: #696969;
+    background-color: #999999;
 }
 
 .ProgressBar__Active {
     height: 100%;
     border-radius: 4px;
     overflow: hidden;
-    background-color: #800000;
+    background-color: #af0101;
     animation-name: timing-translate;
     animation-duration: 500ms;
 }

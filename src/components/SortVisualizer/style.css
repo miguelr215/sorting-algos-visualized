@@ -1,0 +1,10 @@
+.SortVisualizer {
+    padding: 5px;
+    margin: 10px;
+    width: auto;
+    transition: .5s ease-in-out;
+}
+
+.SortVisualizer__ProgressBar {
+    margin: 5px 10px;
+}

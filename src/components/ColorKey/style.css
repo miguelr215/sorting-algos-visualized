@@ -16,8 +16,8 @@
 
 .ColorKey__Box {
     /* flex-shrink: 0; */
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     margin-right: 5px;
 }
 
@@ -31,11 +31,11 @@
 }
 
 .ColorKey__GroupA {
-    background-color: #ebc23b;
+    background-color: #DEDB1F;
 }
 
 .ColorKey__GroupB {
-    background-color: #f33030;
+    background-color: #db1d1d;
 }
 
 .ColorKey__GroupC {

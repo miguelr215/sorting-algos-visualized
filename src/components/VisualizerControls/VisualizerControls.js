@@ -73,7 +73,7 @@ const VisualizerControls = ({
             />
 
             <DropDownMenu 
-                items={['0.25x', '0.5x', '1x', '2x']}
+                items={['0.25x', '0.5x', '1x', '2x', '4x']}
                 placeholder='Speed'
                 selected={`${playbackSpeed}x`}
                 onSelect={onAdjustSpeed}

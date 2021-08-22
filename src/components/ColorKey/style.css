@@ -4,12 +4,12 @@
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
-    /* text-align: center; */
+    justify-content: center;
 }
 
 .ColorKey__Item {
-    /* display: inline-flex; */
-    /* align-items: center; */
+    display: inline-flex;
+    align-items: center;
     margin-right: 40px;
     padding: 5px;
 }

@@ -28,19 +28,27 @@ const SortInfo = ({
                         <tbody>
                             <tr>
                                 <td>Best case time complexity:</td>
-                                <td>{bestCase}</td>
+                                <td>
+                                    <code>{bestCase}</code>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Average time complexity:</td>
-                                <td>{avgCase}</td>
+                                <td>
+                                    <code>{avgCase}</code>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Worst case time complexity:</td>
-                                <td>{worstCase}</td>
+                                <td>
+                                    <code>{worstCase}</code>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Worst case space complexity:</td>
-                                <td>{space}</td>
+                                <td>
+                                    <code>{space}</code>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

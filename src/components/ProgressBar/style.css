@@ -22,7 +22,7 @@
 
     20% {
         animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-        transform: translateX(0);
+        transform: translateX(20%);
     }
 
     50% {

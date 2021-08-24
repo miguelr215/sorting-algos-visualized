@@ -1,6 +1,7 @@
 .TopBar {
     width: 100%;
     background-color: #ffffff;
+    padding-bottom: 15px;
     position: fixed;
     display: flex;
     justify-content: space-between;

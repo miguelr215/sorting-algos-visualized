@@ -5,6 +5,7 @@
     position: fixed;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, .37);
     z-index: 105;
 }
 

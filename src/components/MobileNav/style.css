@@ -1,18 +1,24 @@
 .MobileNav {
-    background-color: orangered;
-    width: 250px;
+    position: absolute;
+    top: 60px;
+    z-index: 105;
+    width: 225px;
+    min-height: calc(100vh - 60px);
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, .39);
+    transition: all .5s ease-in-out;
 }
 
 .MobileNav__closed {
-    background-color: violet;
     left: -300px;
     opacity: 0;
 }
 
 .MobileNav__open {
-    background-color: lightgreen;
     opacity: 1;
-    top: 0;
     left: 0;
 }
 

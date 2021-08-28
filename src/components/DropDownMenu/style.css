@@ -8,14 +8,14 @@
     top: 100%;
     left: 0;
     right: 0;
-    /* z-index: 110; */
+    z-index: 110;
 
     max-height: 80vh;
     border-top: 2px solid #32c537;
     list-style: none;
     text-align: justify;
     background-color: #f9fce7;
-    /* overflow: scroll; */
+    overflow: scroll;
 }
 
 .Menu__Header {
@@ -38,11 +38,14 @@
 .Menu__Item {
     padding: 7px;
     font-weight: 500;
-    /* border-bottom: 1px solid #c4c4c4; */
 }
 
 .Menu__Item:hover,
 .Menu__Item:focus {
     cursor: pointer;
     background-color: #8ed190;
+}
+
+.Menu__DropDownButton:hover {
+    color: #1f8823;
 }

@@ -35,7 +35,7 @@ const AppControls = ({
 
             <Button 
                 onClick={onGenerateRandomArray}
-                className='AppControls__RandomizeBtn'
+                className={'AppControls__RandomizeBtn'}
             >
                 Randomize
             </Button>

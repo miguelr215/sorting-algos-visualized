@@ -11,6 +11,7 @@
     height: 36px;
     border: none;
     outline: none;
+    background: none;
 }
 
 .Button:active {

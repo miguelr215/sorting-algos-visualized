@@ -78,7 +78,7 @@ const VisualizerControls = ({
                 selected={`${playbackSpeed}x`}
                 onSelect={onAdjustSpeed}
                 noDropIcon
-                className='VisualizerControls__SpeedButton'
+                className={'VisualizerControls__SpeedButton'}
             />
 
         </div>

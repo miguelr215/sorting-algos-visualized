@@ -1,12 +1,13 @@
 .VisualizerControls {
     display: inline-flex;
     align-items: center;
-    padding: 10px;
+    padding: 20px 0;
 }
 
 .VisualizerControls__CenterButton {
     height: 50px;
     width: 50px;
+    padding: 0;
     border-radius: 50%;
     background-color: #5eb5f0;
 }
@@ -32,4 +33,5 @@
 .VisualizerControls__Icon {
     height: 20px;
     width: 20px;
+    margin: 0;
 }

@@ -69,6 +69,7 @@ class DropDownMenu extends Component {
                         <Button
                             icon={this.state.open ? DropUp : DropDown}
                             onClick={this.toggle}
+                            className={'Menu__DropDownButton'}
                         />
                     )}
                 </header>

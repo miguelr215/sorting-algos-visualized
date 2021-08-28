@@ -5,12 +5,13 @@
 }
 
 .SortInfo h1 {
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .SoftInfo__Content {
     display: flex;
     flex-flow: row wrap;
+    text-align: left;
 }
 
 .SortInfo__Description,

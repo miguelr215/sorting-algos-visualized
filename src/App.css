@@ -1,0 +1,10 @@
+.App {
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vh;
+    text-align: center;
+}
+
+.App__Body {
+    padding-top: 70px;
+}

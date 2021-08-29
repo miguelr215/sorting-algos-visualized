@@ -7,6 +7,7 @@ import AppControls from '../src/components/AppControls/AppControls';
 import SortVisualizer from './components/SortVisualizer/SortVisualizer';
 
 import BubbleSort, { BubbleSortDesc, BubbleSortKey } from './Algorithms/BubbleSort';
+import SelectionSort, { SelectionSortDesc, SelectionSortKey} from './Algorithms/SelectionSort';
 
 
 class App extends Component {
@@ -20,19 +21,19 @@ class App extends Component {
 
   ALGORITHM = {
     'Bubble Sort': BubbleSort,
-    // 'Selection Sort': SelectionSort,
+    'Selection Sort': SelectionSort,
     // 'Merge Sort': MergeSort
   }
 
   ALGORITHM_KEY = {
     'Bubble Sort': BubbleSortKey,
-    // 'Selection Sort': SelectionSortKey,
+    'Selection Sort': SelectionSortKey,
     // 'Merge Sort': MergeSortKey
   }
 
   ALGORITHM_DESC = {
     'Bubble Sort': BubbleSortDesc,
-    // 'Selection Sort': SelectionSortDesc,
+    'Selection Sort': SelectionSortDesc,
     // 'Merge Sort': MergeSortDesc
   }
 

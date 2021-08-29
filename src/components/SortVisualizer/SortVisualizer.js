@@ -190,7 +190,7 @@ class SortVisualizer extends Component {
                     onBackward={this.stepBackward.bind(this)}
                     onRepeat={this.repeat.bind(this)}
                     onAdjustSpeed={this.adjustPlaybackSpeed}
-                    playing={this.state.timeoutIds > 0}
+                    playing={this.state.timeoutIds.length > 0}
                     playDisabled={
                         (this.state.traceStep >= this.state.trace.length - 1 && 
                             this.state.traceStep !== -1) ||

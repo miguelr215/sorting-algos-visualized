@@ -25,8 +25,6 @@ const Bar = ({
         BarStyle['marginRight'] = `${.3 * width}%`;
     }
 
-    console.log(BarStyle);
-
     return (
         <div style={BarStyle} className={classNames}>
             <span className='Bar__Text'>{val}</span>

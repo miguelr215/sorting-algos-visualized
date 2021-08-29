@@ -4,14 +4,14 @@ import './style.css';
 
 function buildClassNames(rootClass, ClassMappings, userClassName) {
     let classNames = `${rootClass}`;
-    console.log(`root button class before: ${classNames}`)
+    
     Object.keys(ClassMappings).forEach((className) => {
         if(ClassMappings[className]) {
             classNames += ` ${className}`;
         }
     });
     classNames += ` ${userClassName}`;
-    console.log(`root button class after: ${classNames}`)
+    
     return classNames;
 }
 

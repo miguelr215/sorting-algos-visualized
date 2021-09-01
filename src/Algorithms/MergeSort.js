@@ -1,33 +1,85 @@
 import React from 'react';
-import { newTrace, addToTrace, lastSorted, swap, createKey } from './helpers';
+import { newTrace, addToTrace, createKey } from './helpers';
 
 const MergeSort = (nums) => {
     // initial trace
     const trace = newTrace(nums);
-    
-    if(nums.length === 1) {
-        return nums;
-    }
 
-    const center = Math.floor(nums.length / 2);
-    const left = nums.slice(0, center);  // slice from 0 index to middle NOT INCLUDING CENTER INDEX
-    const right = nums.slice(center);  // slice from center to end of array
+    function merge(original, start, mid, end) {
+        const left = original.slice(start, mid);
+        const right = original.slice(mid, end);
+        let i = 0;
+        let j = 0;
+        let k = 0;
+        while (i < left.length && j < right.length) {
+            if (left[i] <= right[j]) {
+                addToTrace(trace, original, [], [], [], [k + start]);
+                original[k + start] = left[i];
+                i++;
+                addToTrace(trace, original, [], [], [], [k + start]);
+            } else {
+                addToTrace(trace, original, [], [], [], [k + start]);
+                original[k + start] = right[j];
+                j++;
+                addToTrace(trace, original, [], [], [], [k + start]);
+            }
+            k++;
+        };
 
-    return merge(MergeSort(left), MergeSort(right));
-};
+        while (i < left.length) {
+            addToTrace(trace, original, [], [], [], [k + start]);
+            original[k + start] = left[i];
+            i++;
+            k++;
+            addToTrace(trace, original, [], [], [], [k + start]);
+        };
 
-function merge(left, right) {
-    const results = [];
+        while (j < right.length) {
+            addToTrace(trace, original, [], [], [], [k + start]);
+            original[k + start] = right[j];
+            j++;
+            k++;
+            addToTrace(trace, original, [], [], [], [k + start]);
+        };
 
-    while (left.length && right.length) {
-        if(left[0] < right[0]) {
-            results.push(left.shift());
-        } else {
-            results.push(right.shift());
-        }
-    }
+        left.length = 0;
+        right.length = 0;
+    };
 
-    return [...results, ...left, ...right];
+    function recursiveMergeSort(original, start, end) {
+        const length = end - start;
+        if (length < 2) {
+            // original = []
+            if (length < 1) {
+                return original;
+            } else {
+                // original = [x]
+                return [original[start]];
+            };
+        };
+
+        const midPoint = Math.floor((start + end) / 2);
+
+        // visualize first half
+        addToTrace(trace, original, [], [...Array(midPoint - start).keys()].map((i) => i + start));
+        recursiveMergeSort(original, start, midPoint);
+
+        // visualize second half
+        addToTrace(trace, original, [], [...Array(end - midPoint).keys()].map((i) => i + midPoint));
+        recursiveMergeSort(original, midPoint, end);
+
+        console.log(`trace before merge`);
+        console.log(trace);
+        merge(original, start, midPoint, end);
+    };
+
+    recursiveMergeSort(nums, 0, nums.length);
+
+    // visualize - mark all elements sorted
+    addToTrace(trace, nums, [...Array(nums.length).keys()]);
+    console.log(`trace after merge`);
+    console.log(trace);
+    return trace;
 };
 
 export const MergeSortKey = createKey('Call Merge Sort', null, 'Overwrite from axillary array');
@@ -49,7 +101,7 @@ export const MergeSortDesc = {
         <ol>
             <li>
             Divide the unsorted list into <em>n</em> sublists, each
-            containing one element(a list of one element is considered
+            containing one element (a list of one element is considered
             sorted)
             </li>
             <li>
@@ -60,17 +112,17 @@ export const MergeSortDesc = {
     ),
     worstCase: (
         <span>
-        O(<em>n</em> log <em>n</em>)
+        O(<em>n</em>*log(<em>n</em>))
         </span>
     ),
     avgCase: (
         <span>
-        O(<em>n</em> log <em>n</em>)
+        O(<em>n</em>*log(<em>n</em>))
         </span>
     ),
     bestCase: (
         <span>
-        O(<em>n</em> log <em>n</em>)
+        O(<em>n</em>*log(<em>n</em>))
         </span>
     ),
     space: (

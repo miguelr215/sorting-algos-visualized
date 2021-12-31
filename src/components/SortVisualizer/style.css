@@ -1,10 +1,19 @@
 .SortVisualizer {
-    padding: 5px;
-    margin: 10px;
-    width: auto;
-    transition: .5s ease-in-out;
+  padding: 5px;
+  margin: 10px;
+  width: auto;
+  transition: 0.5s ease-in-out;
 }
 
 .SortVisualizer__ProgressBar {
-    margin: 5px 10px;
+  margin: 5px 10px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .SortVisualizer {
+    width: 100%;
+    margin: 5px;
+    padding: 0px;
+  }
 }

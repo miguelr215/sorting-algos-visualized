@@ -1,37 +1,44 @@
 .VisualizerControls {
-    display: inline-flex;
-    align-items: center;
-    padding: 20px 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 0;
 }
 
 .VisualizerControls__CenterButton {
-    height: 50px;
-    width: 50px;
-    padding: 0;
-    border-radius: 50%;
-    background-color: #5eb5f0;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #5eb5f0;
 }
 
 .VisualizerControls__CenterButton:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .VisualizerControls__CenterButton:hover,
 .VisualizerControls__CenterButton:focus {
-    background-color: #1e84c9;
+  background-color: #1e84c9;
 }
 
 .VisualizerControls__CenterButton:disabled {
-    background-color: #cacaca;
+  background-color: #cacaca;
 }
 
 .VisualizerControls__Button,
 .VisualizerControls__SpeedButton {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 .VisualizerControls__Icon {
-    height: 20px;
-    width: 20px;
-    margin: 0;
+  height: 20px;
+  width: 20px;
+  margin: 0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .VisualizerControls {
+    padding: 10px 0;
+  }
 }

@@ -51,9 +51,13 @@ const MergeSort = (nums) => {
         if (length < 2) {
             // original = []
             if (length < 1) {
+                console.log('length less than 1');
+                console.log(original);
                 return original;
             } else {
                 // original = [x]
+                console.log('length equals 1');
+                console.log([original[start]]);
                 return [original[start]];
             };
         };
